@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Upcoming from "./Upcoming";
+import NowPlaying from "./NowPlaying"
 
 class Main extends Component {
   state = {

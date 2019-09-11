@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      {/* <Home />
+      <Home />
       <Main />
-      <SearchMovie /> */}
+      <SearchMovie />
     </div>
   );
 }

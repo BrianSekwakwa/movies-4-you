@@ -1,0 +1,7 @@
+.navigation {
+  .botton-margin {
+    @include verySmall {
+      margin-top: 0.6rem;
+    }
+  }
+}

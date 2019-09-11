@@ -1,6 +1,43 @@
-// Media Queries
-@media (max-width: 575.98px) {
-  .botton-margin {
-    margin-top: 0.6rem;
+// Media Query Mixins
+
+// small screens with screen widths of 600px or less
+@mixin verySmall {
+  @media screen and (max-width: 575.98px) {
+    @content;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin small {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin medium {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin large {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin veryLarge {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+// Wide Desktop Screens (1366px and up)
+@mixin wideScreens {
+  @media screen and (min-width: 1366px) {
+    @content;
   }
 }

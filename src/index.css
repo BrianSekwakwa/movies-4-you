@@ -1,3 +1,14 @@
-@media (max-width: 575.98px) {
-  .botton-margin {
+@media screen and (max-width: 575.98px) {
+  .navigation .botton-margin {
     margin-top: 0.6rem; } }
+
+.home {
+  background: red;
+  width: 100%;
+  height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem; }
+  .home p {
+    font-size: 1.2rem; }

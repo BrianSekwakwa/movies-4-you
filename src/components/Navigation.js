@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -8,25 +8,30 @@ import Nav from "react-bootstrap/Nav";
 class Navigation extends Component {
   state = {
     movieName: null
-  }
+  };
 
-  handleChange = (e) => {
-    console.log(e.target.value)
-  }
-
-  handleSubmit = (e) => {
+  handleChange = e => {
     console.log(e.target.value);
-  }
+  };
+
+  handleSubmit = e => {
+    console.log(e.target.value);
+  };
   render() {
     return (
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+      <Navbar
+        className="navigation"
+        collapseOnSelect
+        expand="lg"
+        bg="dark"
+        variant="dark"
+      >
+        <Navbar.Brand href="#home">M4Y</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#home">UpComing</Nav.Link>
+            <Nav.Link href="#features">Now-Playing</Nav.Link>
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
