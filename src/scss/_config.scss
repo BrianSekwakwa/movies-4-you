@@ -1,7 +1,18 @@
+.App {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.mg-top {
+  &--3 {
+    margin-top: 3rem;
+  }
+}
+
 // Media Query Mixins
 
 // small screens with screen widths of 600px or less
-@mixin verySmall {
+@mixin x-small {
   @media screen and (max-width: 575.98px) {
     @content;
   }
@@ -29,14 +40,14 @@
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@mixin veryLarge {
+@mixin x-large {
   @media screen and (min-width: 1200px) {
     @content;
   }
 }
 
 // Wide Desktop Screens (1366px and up)
-@mixin wideScreens {
+@mixin xx-large {
   @media screen and (min-width: 1366px) {
     @content;
   }

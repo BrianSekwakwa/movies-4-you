@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Upcoming from "./Upcoming";
-import NowPlaying from "./NowPlaying"
+import NowPlaying from "./NowPlaying";
 
 class Main extends Component {
   state = {
@@ -15,7 +15,7 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
+      <div className="main">
         <Upcoming />
         <NowPlaying />
       </div>

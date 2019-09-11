@@ -1,3 +1,10 @@
+.App {
+  max-width: 1366px;
+  margin: 0 auto; }
+
+.mg-top--3 {
+  margin-top: 3rem; }
+
 @media screen and (max-width: 575.98px) {
   .navigation .botton-margin {
     margin-top: 0.6rem; } }
@@ -9,6 +16,33 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 1rem; }
+  padding: 0 1rem; }
   .home p {
     font-size: 1.2rem; }
+
+.main {
+  padding: 3rem 0;
+  background: pink; }
+
+.movie-cards {
+  background: green;
+  padding: 0 1rem; }
+  .movie-cards__card-group {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    background: orange;
+    display: grid;
+    gap: 1rem; }
+    @media screen and (min-width: 768px) {
+      .movie-cards__card-group {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (min-width: 992px) {
+      .movie-cards__card-group {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media screen and (min-width: 1200px) {
+      .movie-cards__card-group {
+        grid-template-columns: repeat(4, 1fr); } }
+    .movie-cards__card-group__card-item {
+      margin: 0 auto; }

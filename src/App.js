@@ -10,7 +10,7 @@ function App() {
       <Navigation />
       <Home />
       <Main />
-      <SearchMovie />
+      {/* <SearchMovie /> */}
     </div>
   );
 }
