@@ -16,6 +16,7 @@ class Navigation extends Component {
 
   handleSubmit = e => {
     console.log(e.target.value);
+    e.preventDefault();
   };
   render() {
     return (
@@ -33,8 +34,13 @@ class Navigation extends Component {
             <Nav.Link href="#home">UpComing</Nav.Link>
             <Nav.Link href="#features">Now-Playing</Nav.Link>
           </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <Form onSubmit={this.handleSubmit} inline>
+            <FormControl
+              onChange={this.handleChange}
+              type="text"
+              placeholder="Search"
+              className="mr-sm-2"
+            />
             <Button className="botton-margin" variant="outline-info">
               Search
             </Button>
