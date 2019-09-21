@@ -36,10 +36,14 @@ class Main extends Component {
           upcoming={this.state.upcoming}
           imageBaseURL={this.state.imageBaseURL}
         />
-        <NowPlaying
-          nowPlaying={this.state.nowPlaying}
+        <Upcoming
+          upcoming={this.state.nowPlaying}
           imageBaseURL={this.state.imageBaseURL}
         />
+        {/* <NowPlaying
+          nowPlaying={this.state.nowPlaying}
+          imageBaseURL={this.state.imageBaseURL}
+        /> */}
       </div>
     );
   }
