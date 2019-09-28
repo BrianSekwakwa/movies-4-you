@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Upcoming from "./Upcoming";
-import NowPlaying from "./NowPlaying";
+import MovieCards from "./MovieCards";
 
 class Main extends Component {
   state = {
@@ -11,6 +10,7 @@ class Main extends Component {
   };
 
   componentDidMount() {
+    // Searching for the upcoming and now playing movies from the movies database API
     fetch(
       `https://api.themoviedb.org/3/movie/upcoming?api_key=${this.state.apiKey}&language=en-US&page=1`
     )
@@ -32,18 +32,14 @@ class Main extends Component {
   render() {
     return (
       <div className="main">
-        <Upcoming
+        <MovieCards
           upcoming={this.state.upcoming}
           imageBaseURL={this.state.imageBaseURL}
         />
-        <Upcoming
+        <MovieCards
           upcoming={this.state.nowPlaying}
           imageBaseURL={this.state.imageBaseURL}
         />
-        {/* <NowPlaying
-          nowPlaying={this.state.nowPlaying}
-          imageBaseURL={this.state.imageBaseURL}
-        /> */}
       </div>
     );
   }
