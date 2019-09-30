@@ -1,13 +1,13 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-function NowPlaying(props) {
-  const { imageBaseURL, nowPlaying } = props;
+function Upcoming(props) {
+  const { imageBaseURL, upcoming } = props;
   let data = null;
+  console.log(upcoming);
 
-  console.log(nowPlaying);
-  if (nowPlaying !== null) {
-    const results = nowPlaying.results;
+  if (upcoming !== null) {
+    const results = upcoming.results;
     data = (
       <div className="movie-cards__card-group">
         {results.map(item => {
@@ -33,11 +33,11 @@ function NowPlaying(props) {
   }
 
   return (
-    <div className="movie-cards mg-top--3">
-      <h3 className="movie-cards__header">Now Playing</h3>
+    <div className="movie-cards">
+      <h3 className="movie-cards__header">UpComing</h3>
       {data}
     </div>
   );
 }
 
-export default NowPlaying;
+export default Upcoming;

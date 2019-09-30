@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import MovieCards from "./MovieCards";
+import Upcoming from "./Upcoming";
+import NowPlaying from "./NowPlaying";
 
 class Main extends Component {
   state = {
@@ -32,12 +33,12 @@ class Main extends Component {
   render() {
     return (
       <div className="main">
-        <MovieCards
+        <Upcoming
           upcoming={this.state.upcoming}
           imageBaseURL={this.state.imageBaseURL}
         />
-        <MovieCards
-          upcoming={this.state.nowPlaying}
+        <NowPlaying
+          nowPlaying={this.state.nowPlaying}
           imageBaseURL={this.state.imageBaseURL}
         />
       </div>
