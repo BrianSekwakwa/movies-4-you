@@ -5,8 +5,11 @@
 .mg-top--3 {
   margin-top: 3rem; }
 
+.mg-top--1 {
+  margin-top: 1rem; }
+
 @media screen and (max-width: 575.98px) {
-  .navigation .botton-margin {
+  .navigation .top-margin {
     margin-top: 0.6rem; } }
 
 .home {
@@ -20,7 +23,7 @@
   .home p {
     font-size: 1.2rem; }
 
-.main {
+.movies {
   padding: 3rem 0;
   background: pink; }
 
@@ -60,3 +63,16 @@
   .movie-cards__loading {
     margin-top: 1.5rem;
     font-size: 1.5rem; }
+
+.movie-details__backdrop {
+  width: 100%; }
+
+.movie-details__details {
+  background: orange;
+  padding: 2rem 1rem 2rem 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1rem; }
+  .movie-details__details__poster {
+    width: 100%; }

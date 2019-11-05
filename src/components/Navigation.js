@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Nav from "react-bootstrap/Nav";
+import { Link } from "react-router-dom";
 
 class Navigation extends Component {
   state = {
@@ -27,21 +28,23 @@ class Navigation extends Component {
         bg="dark"
         variant="dark"
       >
-        <Navbar.Brand href="#home">M4Y</Navbar.Brand>
+        <Link to="/">
+          <Navbar.Brand href="#home">M4Y</Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home">UpComing</Nav.Link>
-            <Nav.Link href="#features">Now-Playing</Nav.Link>
+            {/* <Nav.Link href="#home">UpComing</Nav.Link>
+            <Nav.Link href="#features">Now-Playing</Nav.Link> */}
           </Nav>
           <Form onSubmit={this.handleSubmit} inline>
             <FormControl
               onChange={this.handleChange}
               type="text"
               placeholder="Search"
-              className="mr-sm-2"
+              className="mr-sm-2 top-margin"
             />
-            <Button className="botton-margin" variant="outline-info">
+            <Button className="top-margin" variant="outline-info">
               Search
             </Button>
           </Form>
