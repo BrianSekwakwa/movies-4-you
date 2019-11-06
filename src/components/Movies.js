@@ -26,7 +26,13 @@ class Movies extends Component {
               upcoming: upcoming,
               nowPlaying: nowPlaying
             });
+          })
+          .catch(err => {
+            alert("Could not load data \n", err);
           });
+      })
+      .catch(err => {
+        alert("Could not load data \n", err);
       });
   }
 

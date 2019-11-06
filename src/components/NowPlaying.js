@@ -13,7 +13,20 @@ function NowPlaying(props) {
       <div className="movie-cards__card-group">
         {results.map(item => {
           return (
-            <Link to="/MovieDetails" key={item.id}>
+            <Link
+              to={{
+                pathname: "/MovieDetails",
+                state: {
+                  backdrop: `${imageBaseURL}${item.backdrop_path}`,
+                  poster: `${imageBaseURL}${item.poster_path}`,
+                  title: item.title,
+                  overview: item.overview,
+                  rating: item.vote_average,
+                  releaseDate: item.release_date
+                }
+              }}
+              key={item.id}
+            >
               <Card className="movie-cards__card-group__card-item">
                 <Card.Img
                   variant="top"
