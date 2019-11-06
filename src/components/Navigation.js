@@ -5,6 +5,8 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { searchMovie } from "../store/actions/searchMovieAction";
 
 class Navigation extends Component {
   state = {
@@ -12,14 +14,22 @@ class Navigation extends Component {
   };
 
   handleChange = e => {
-    console.log(e.target.value);
+    this.setState({
+      movieName: e.target.value
+    });
+  };
+
+  handleClick = e => {
+    console.log(this.state.movieName);
+    this.props.searchMovie(this.state.movieName);
   };
 
   handleSubmit = e => {
-    console.log(e.target.value);
     e.preventDefault();
   };
+
   render() {
+    console.log(this.props);
     return (
       <Navbar
         className="navigation"
@@ -44,9 +54,15 @@ class Navigation extends Component {
               placeholder="Search"
               className="mr-sm-2 top-margin"
             />
-            <Button className="top-margin" variant="outline-info">
-              Search
-            </Button>
+            <Link to="/SearchMovie">
+              <Button
+                onClick={this.handleClick}
+                className="top-margin"
+                variant="outline-info"
+              >
+                Search
+              </Button>
+            </Link>
           </Form>
         </Navbar.Collapse>
       </Navbar>
@@ -54,4 +70,15 @@ class Navigation extends Component {
   }
 }
 
-export default Navigation;
+const mapDispatchToProps = dispatch => {
+  return {
+    searchMovie: movieName => {
+      dispatch(searchMovie(movieName));
+    }
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Navigation);
