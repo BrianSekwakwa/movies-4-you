@@ -1,11 +1,16 @@
 const initState = {
-  movies: "some movies"
+  movieData: null
 };
 
 const rootReducer = (state = initState, action) => {
   switch (action.type) {
-    case "SOMETHING":
-      console.log("From redux action", action.payload);
+    case "LOADED":
+      return {
+        ...state,
+        movieData: action.payload
+      };
+    case "ERROR":
+      alert(action.payload);
       return state;
     default:
       return state;
