@@ -7,6 +7,7 @@ import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { searchMovie } from "../store/actions/searchMovieAction";
+import { loading } from "../store/actions/loadingAction";
 
 class Navigation extends Component {
   state = {
@@ -20,7 +21,6 @@ class Navigation extends Component {
   };
 
   handleClick = e => {
-    console.log(this.state.movieName);
     this.props.searchMovie(this.state.movieName);
   };
 
@@ -29,7 +29,6 @@ class Navigation extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <Navbar
         className="navigation"
@@ -38,26 +37,27 @@ class Navigation extends Component {
         bg="dark"
         variant="dark"
       >
-        <Link to="/">
+        <Link to="/" id="logo">
           <Navbar.Brand href="#home">M4Y</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            {/* <Nav.Link href="#home">UpComing</Nav.Link>
-            <Nav.Link href="#features">Now-Playing</Nav.Link> */}
+            <Link to="/" id="home">
+              <span>Home</span>
+            </Link>
           </Nav>
           <Form onSubmit={this.handleSubmit} inline>
             <FormControl
               onChange={this.handleChange}
               type="text"
-              placeholder="Search"
+              placeholder="search eg. avengers"
               className="mr-sm-2 top-margin"
             />
             <Link to="/SearchMovie">
               <Button
                 onClick={this.handleClick}
-                className="top-margin"
+                className="navagation__form-button top-margin"
                 variant="outline-info"
               >
                 Search
@@ -73,7 +73,10 @@ class Navigation extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     searchMovie: movieName => {
-      dispatch(searchMovie(movieName));
+      dispatch(loading());
+      setTimeout(() => {
+        dispatch(searchMovie(movieName));
+      }, 1000);
     }
   };
 };

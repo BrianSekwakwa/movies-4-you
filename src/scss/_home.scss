@@ -1,13 +1,24 @@
 .home {
-  background: red;
+  background: url("./components/home.jpg");
+  background-color: rgba($color: $primary-color, $alpha: 0.7);
+  background-blend-mode: color;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 1rem;
+  color: $secondary-color;
 
   & p {
     font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  & img {
+    width: 200px;
   }
 }

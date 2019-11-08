@@ -1,41 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 .App {
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: white;
+  color: #343a40;
+  box-shadow: 0px 0px 5px 1px #00d474; }
+
+body {
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px; }
 
 .mg-top--3 {
   margin-top: 3rem; }
-
-.mg-top--1 {
-  margin-top: 1rem; }
 
 @media screen and (max-width: 575.98px) {
   .navigation .top-margin {
     margin-top: 0.6rem; } }
 
+.navigation #logo {
+  font-family: "Permanent Marker", cursive;
+  font-weight: bold; }
+
+.navigation #home {
+  color: white;
+  transition: all 0.34s ease-in-out;
+  font-weight: 400; }
+  .navigation #home:hover {
+    text-decoration: none;
+    color: #00d474; }
+
+.navigation button {
+  border-color: #00d474;
+  color: #00d474;
+  font-weight: bold; }
+  .navigation button:hover {
+    background: #00d474;
+    color: #343a40;
+    border-color: #00d474; }
+
 .home {
-  background: red;
+  background: url("./components/home.jpg");
+  background-color: rgba(52, 58, 64, 0.7);
+  background-blend-mode: color;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  color: #00d474; }
   .home p {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    font-weight: bold; }
+  .home img {
+    width: 200px; }
 
 .movies {
-  padding: 3rem 0;
-  background: pink; }
+  padding: 3rem 0; }
 
 .movie-cards {
-  background: green;
   padding: 0 1rem; }
   .movie-cards__card-group {
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
-    background: orange;
     display: grid;
     gap: 1rem; }
     @media screen and (min-width: 768px) {
@@ -70,7 +107,6 @@
       display: block; } }
 
 .movie-details__details {
-  background: orange;
   padding: 1rem 1rem 2rem 1rem;
   width: 100%;
   display: grid;
@@ -85,9 +121,12 @@
     .movie-details__details {
       grid-template-columns: 1fr 3fr; } }
   .movie-details__details__poster {
-    width: 100%; }
+    width: 100%;
+    box-shadow: 0px 0px 7px 1px #343a40; }
   .movie-details__details__summary {
-    background: yellow; }
+    border: 5px solid #343a40;
+    box-shadow: 0px 0px 7px 1px #343a40;
+    padding: 0.7rem; }
     .movie-details__details__summary p {
       font-size: 1.1rem; }
       .movie-details__details__summary p span {
@@ -96,17 +135,18 @@
 .loader {
   font-size: 2rem;
   margin-top: 2rem;
-  text-align: center; }
+  text-align: center;
+  height: calc(100vh - 89px); }
 
 .search-movie-cards {
-  background: green;
-  padding: 0 1rem; }
+  margin-top: 2rem;
+  padding: 0 1rem;
+  padding-bottom: 2rem; }
   .search-movie-cards__card-group {
     margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-    background: orange;
     display: grid;
     gap: 1rem; }
     @media screen and (min-width: 768px) {
@@ -132,3 +172,10 @@
   .search-movie-cards__loading {
     margin-top: 1.5rem;
     font-size: 1.5rem; }
+
+.hover {
+  box-shadow: 0px 0px 7px 1px #343a40;
+  background: #343a40;
+  transition: all 0.3s ease-in-out; }
+  .hover:hover {
+    transform: scale(1.05); }

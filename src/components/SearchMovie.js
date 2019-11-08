@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 function Home(props) {
-  console.log(props);
   let data;
   let imageBaseURL = "https://image.tmdb.org/t/p/original";
 
@@ -13,7 +12,7 @@ function Home(props) {
   if (props.movieData) {
     const { movieList, movieName } = props.movieData;
     data = (
-      <div className="search-movie-cards mg-top--3">
+      <div className="search-movie-cards">
         <h3 className="seatch-movie-cards__header">{movieName} movies</h3>
         {/* Looping through movie data to put them into their own cards */}
         <div className="search-movie-cards__card-group">
@@ -33,7 +32,7 @@ function Home(props) {
                 }}
                 key={item.id}
               >
-                <Card className="search-movie-cards__card-group__card-item">
+                <Card className="search-movie-cards__card-group__card-item hover">
                   <Card.Img
                     variant="top"
                     className="search-movie-cards__card-group__card-item__image"

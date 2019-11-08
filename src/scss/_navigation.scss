@@ -1,7 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+
 .navigation {
   .top-margin {
     @include x-small {
       margin-top: 0.6rem;
+    }
+  }
+
+  & #logo {
+    font-family: "Permanent Marker", cursive;
+    font-weight: bold;
+  }
+
+  & #home {
+    color: white;
+    transition: all 0.34s ease-in-out;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: none;
+      color: $secondary-color;
+    }
+  }
+
+  & button {
+    border-color: $secondary-color;
+    color: $secondary-color;
+    font-weight: bold;
+
+    &:hover {
+      background: $secondary-color;
+      color: $primary-color;
+      border-color: $secondary-color;
     }
   }
 }

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 function Upcoming(props) {
   const { imageBaseURL, upcoming } = props;
   let data = null;
-  console.log(upcoming);
 
   if (upcoming !== null) {
     const results = upcoming.results;
@@ -27,7 +26,7 @@ function Upcoming(props) {
               }}
               key={item.id}
             >
-              <Card className="movie-cards__card-group__card-item">
+              <Card className="movie-cards__card-group__card-item hover">
                 <Card.Img
                   variant="top"
                   className="movie-cards__card-group__card-item__image"

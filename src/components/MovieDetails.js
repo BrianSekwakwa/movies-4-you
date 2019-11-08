@@ -2,7 +2,6 @@ import React from "react";
 import Navigation from "./Navigation";
 
 function MovieDetails(props) {
-  console.log(props);
   let details = null;
 
   if (props.location.state) {

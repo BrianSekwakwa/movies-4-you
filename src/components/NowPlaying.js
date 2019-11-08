@@ -6,7 +6,6 @@ function NowPlaying(props) {
   const { imageBaseURL, nowPlaying } = props;
   let data = null;
 
-  console.log(nowPlaying);
   if (nowPlaying !== null) {
     const results = nowPlaying.results;
     data = (
@@ -27,7 +26,7 @@ function NowPlaying(props) {
               }}
               key={item.id}
             >
-              <Card className="movie-cards__card-group__card-item">
+              <Card className="movie-cards__card-group__card-item hover">
                 <Card.Img
                   variant="top"
                   className="movie-cards__card-group__card-item__image"

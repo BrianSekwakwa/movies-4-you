@@ -9,6 +9,11 @@ const rootReducer = (state = initState, action) => {
         ...state,
         movieData: action.payload
       };
+    case "LOADING":
+      return {
+        ...state,
+        movieData: action.payload
+      };
     case "ERROR":
       alert(action.payload);
       return state;

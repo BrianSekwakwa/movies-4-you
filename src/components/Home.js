@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "./movie_db.png";
 
 function Home() {
   return (
@@ -7,6 +8,7 @@ function Home() {
       <p>
         Check out all of the latest and upcoming movies playing at your theaters
       </p>
+      <img src={logo} alt="Movie Database Logo" />
     </div>
   );
 }
