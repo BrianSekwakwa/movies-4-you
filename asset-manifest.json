@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/movies-4-you/static/css/main.66cc4ca3.chunk.css",
+    "main.js": "/movies-4-you/static/js/main.c0d8b316.chunk.js",
+    "main.js.map": "/movies-4-you/static/js/main.c0d8b316.chunk.js.map",
+    "runtime~main.js": "/movies-4-you/static/js/runtime~main.3ee68ee5.js",
+    "runtime~main.js.map": "/movies-4-you/static/js/runtime~main.3ee68ee5.js.map",
+    "static/js/2.cc4f2b45.chunk.js": "/movies-4-you/static/js/2.cc4f2b45.chunk.js",
+    "static/js/2.cc4f2b45.chunk.js.map": "/movies-4-you/static/js/2.cc4f2b45.chunk.js.map",
+    "index.html": "/movies-4-you/index.html",
+    "precache-manifest.f3a6d9698c6bfdc2e78eb09c5de740f5.js": "/movies-4-you/precache-manifest.f3a6d9698c6bfdc2e78eb09c5de740f5.js",
+    "service-worker.js": "/movies-4-you/service-worker.js",
+    "static/css/main.66cc4ca3.chunk.css.map": "/movies-4-you/static/css/main.66cc4ca3.chunk.css.map",
+    "static/media/index.css": "/movies-4-you/static/media/home.de8d6e95.jpg"
+  }
+}
